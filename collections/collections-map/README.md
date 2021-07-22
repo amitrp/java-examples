@@ -4,7 +4,16 @@ This project contains Java Collections Map code samples that are used as example
 
 
 ## Respective Tutorials
-- 
+
+### [Filtering a Map in Java](https://www.amitph.com/java-filter-map-examples/)
+
+### [Introduction to Java Collections Map Interface](https://www.amitph.com/introduction-java-map/)
+
+### [Introduction to HashMap in Java with Examples](https://www.amitph.com/introduction-java-hashmap/)
+
+### [How to Initialise a HashMap Inline in Java](https://www.amitph.com/create-hashmap-in-java/)
+
+### [Examples of Converting List to Map using Streams](https://www.amitph.com/convert-list-to-map-using-streams/)
 
 
 ## How to Use
