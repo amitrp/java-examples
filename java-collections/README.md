@@ -6,6 +6,8 @@ This project contains Java Collections code samples that are used as examples on
 
 ### [Filtering a Map in Java](https://www.amitph.com/java-filter-map-examples/)
 
+### [Merging two Maps in Java](https://www.amitph.com/java-merge-maps/)
+
 ### [Converting Between Array of Primitives to Array of Objects](https://www.amitph.com/java-primitive-array-to-object-array/)
 
 ### [Examples of Conversion Between Array and List in Java](https://www.amitph.com/java-array-to-list-and-list-to-array/)
