@@ -9,7 +9,7 @@
 
     <parent>
         <groupId>com.amitph.java</groupId>
-        <artifactId>collections</artifactId>
+        <artifactId>java-collections</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 

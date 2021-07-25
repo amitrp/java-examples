@@ -7,6 +7,8 @@ This project contains Java Collections Map code samples that are used as example
 
 ### [Filtering a Map in Java](https://www.amitph.com/java-filter-map-examples/)
 
+### [Merging two Maps in Java](https://www.amitph.com/java-merge-maps/)
+
 ### [Introduction to Java Collections Map Interface](https://www.amitph.com/introduction-java-map/)
 
 ### [Introduction to HashMap in Java with Examples](https://www.amitph.com/introduction-java-hashmap/)
