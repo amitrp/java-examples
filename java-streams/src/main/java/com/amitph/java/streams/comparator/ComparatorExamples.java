@@ -1,4 +1,4 @@
-package com.amitph.java.streams.sort;
+package com.amitph.java.streams.comparator;
 
 import com.amitph.java.streams.model.Student;
 
@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class SortCollections {
+public class ComparatorExamples {
     private List<Student> students;
 
     public void initialize() {
@@ -93,15 +93,15 @@ public class SortCollections {
     }
 
     public static void main(String[] a) {
-        SortCollections sortCollections = new SortCollections();
-        sortCollections.initialize();
+        ComparatorExamples comparatorExamples = new ComparatorExamples();
+        comparatorExamples.initialize();
 
-        sortCollections.usingAnonymousComparator();
-        sortCollections.usingLambdaExpression();
-        sortCollections.usingMethodReference();
-        sortCollections.usingComparatorComparing();
-        sortCollections.usingComparatorCompositions();
-        sortCollections.usingLambdaExpression_Reversed();
-        sortCollections.usingComparatorComparing_Reversed();
+        comparatorExamples.usingAnonymousComparator();
+        comparatorExamples.usingLambdaExpression();
+        comparatorExamples.usingMethodReference();
+        comparatorExamples.usingComparatorComparing();
+        comparatorExamples.usingComparatorCompositions();
+        comparatorExamples.usingLambdaExpression_Reversed();
+        comparatorExamples.usingComparatorComparing_Reversed();
     }
 }

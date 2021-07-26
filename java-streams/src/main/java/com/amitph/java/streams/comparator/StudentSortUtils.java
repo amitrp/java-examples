@@ -1,4 +1,4 @@
-package com.amitph.java.streams.sort;
+package com.amitph.java.streams.comparator;
 
 import com.amitph.java.streams.model.Student;
 
