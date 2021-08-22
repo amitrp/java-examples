@@ -17,15 +17,17 @@ This project contains Java Collections Map code samples that are used as example
 
 ### [Examples of Converting List to Map using Streams](https://www.amitph.com/convert-list-to-map-using-streams/)
 
+### [Sort HashMap by Value or Key in Java](https://www.amitph.com/java-hashmap-sort/)
+
 
 ## How to Use
 *Clone the project using*
 ```
-~ git clone https://github.com/amitrp/core-java.git
+~ git clone https://github.com/amitrp/java-examples.git
 ```
 
 
 *Move to the Collections Module*
 ```
-~ cd collections/collections-map/
+~ cd java-collections/collections-map/
 ```
