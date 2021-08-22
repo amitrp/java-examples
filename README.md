@@ -4,7 +4,7 @@ This project contains Core Java code samples that are used as examples on [amitp
 ## How to use
 *Clone the project using*
 ```
-~ git clone https://github.com/amitrp/core-java.git
+~ git clone https://github.com/amitrp/java-examples.git
 ```
 
 
