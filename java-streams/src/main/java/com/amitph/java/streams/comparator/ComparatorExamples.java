@@ -47,10 +47,12 @@ public class ComparatorExamples {
     }
 
     public void usingMethodReference() {
-        System.out.println("Sorting by usingMethodReference");
-
+        System.out.println("Sorting by firstName usingMethodReference");
         students.sort(StudentSortUtils::comparingFirstName);
+        students.forEach(System.out::println);
 
+        System.out.println("Sorting by firstName & lastName usingMethodReference");
+        students.sort(StudentSortUtils::comparingFirstName);
         students.forEach(System.out::println);
     }
 
@@ -92,6 +94,17 @@ public class ComparatorExamples {
         students.forEach(System.out::println);
     }
 
+    public void usingComparatorCompositions_MixedSortOrder() {
+        System.out.println("Sorting by usingComparatorCompositions_MixedSortOrder");
+
+        students.sort(Comparator.comparing(
+                Student::getLastName)
+                .thenComparing(Student::getAge, Comparator.reverseOrder())
+        );
+
+        students.forEach(System.out::println);
+    }
+
     public static void main(String[] a) {
         ComparatorExamples comparatorExamples = new ComparatorExamples();
         comparatorExamples.initialize();
@@ -103,5 +116,6 @@ public class ComparatorExamples {
         comparatorExamples.usingComparatorCompositions();
         comparatorExamples.usingLambdaExpression_Reversed();
         comparatorExamples.usingComparatorComparing_Reversed();
+        comparatorExamples.usingComparatorCompositions_MixedSortOrder();
     }
 }
