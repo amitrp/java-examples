@@ -4,6 +4,8 @@ This project contains Java Streams API code samples that are used as examples on
 
 ## Top Java Streams Tutorials on amitph.com
 
+### [Sorting Collections with Java Streams API](https://www.amitph.com/java-streams-sorted/)
+
 ### [Comparator with Java Lambda Expression Examples](https://www.amitph.com/java-sort-with-lambda-expressions/)
 
 ### [Sort HashMap by Value or Key in Java](https://www.amitph.com/java-hashmap-sort/)

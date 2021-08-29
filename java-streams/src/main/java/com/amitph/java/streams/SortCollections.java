@@ -29,6 +29,7 @@ public class SortCollections {
     }
 
     private void streamOfElements() {
+        System.out.println();
         System.out.println("Sorting -> steamOfElements");
 
         List<String> firstNames = students.stream()
@@ -40,6 +41,7 @@ public class SortCollections {
     }
 
     private void streamOfCustomObjects() {
+        System.out.println();
         System.out.println("Sorting -> steamOfCustomObjects");
 
         List<Student> firstNames = students.stream()
@@ -49,17 +51,8 @@ public class SortCollections {
         firstNames.forEach(System.out::println);
     }
 
-    private void streamOfCustomObjects_Reversed() {
-        System.out.println("Sorting -> steamOfCustomObjects_Reversed");
-
-        List<Student> firstNames = students.stream()
-                .sorted(Comparator.comparing(Student::getFirstName).reversed())
-                .collect(Collectors.toList());
-
-        firstNames.forEach(System.out::println);
-    }
-
     private void streamOfElements_Reversed() {
+        System.out.println();
         System.out.println("Sorting -> steamOfElements_Reversed");
 
         List<String> firstNames = students.stream()
@@ -70,7 +63,19 @@ public class SortCollections {
         System.out.println(firstNames);
     }
 
+    private void streamOfCustomObjects_Reversed() {
+        System.out.println();
+        System.out.println("Sorting -> steamOfCustomObjects_Reversed");
+
+        List<Student> firstNames = students.stream()
+                .sorted(Comparator.comparing(Student::getFirstName).reversed())
+                .collect(Collectors.toList());
+
+        firstNames.forEach(System.out::println);
+    }
+
     private void streamOfMapKeys() {
+        System.out.println();
         System.out.println("Sorting -> steamOfMapKeys");
 
         List<Long> studentIds = studentMap.keySet().stream()
@@ -81,6 +86,7 @@ public class SortCollections {
     }
 
     private void streamOfMapValues() {
+        System.out.println();
         System.out.println("Sorting -> streamOfMapValues");
 
         List<Student> students = studentMap.values().stream()
