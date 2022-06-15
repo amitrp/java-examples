@@ -83,6 +83,11 @@ This project contains Core Java code samples that are used as examples on [amitp
 
 ### [Sorting Collections with Java Streams API](https://www.amitph.com/java-streams-sorted/)
 
+### [Interfaces In Java](https://www.amitph.com/java-interface/)
+
+### [Abstract classes in Java](https://www.amitph.com/java-abstract-class/ )
+
+### [Default Methods in Java Interfaces](https://www.amitph.com/java-interface-default-methods/ )
 
 ## How to use
 *Clone the project using*
