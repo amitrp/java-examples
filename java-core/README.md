@@ -6,7 +6,7 @@ This project contains Basic Java code samples that are used as examples on [amit
 ### [Interfaces In Java](https://www.amitph.com/java-interface/)
 
 ### [Abstract classes in Java](https://www.amitph.com/java-abstract-class/ )
-
+ 
 
 ## How to use
 *Clone the project using*
