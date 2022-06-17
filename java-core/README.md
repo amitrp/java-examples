@@ -9,6 +9,9 @@ This project contains Basic Java code samples that are used as examples on [amit
 
 ### [Default Methods in Java Interfaces](https://www.amitph.com/java-interface-default-methods/ )
 
+### Static Methods in Java Interfaces
+
+
 ## How to use
 *Clone the project using*
 ```
