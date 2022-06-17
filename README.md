@@ -89,6 +89,10 @@ This project contains Core Java code samples that are used as examples on [amitp
 
 ### [Default Methods in Java Interfaces](https://www.amitph.com/java-interface-default-methods/ )
 
+### [Static Methods in Java Interfaces](https://www.amitph.com/java-interface-static-methods/)
+
+
+
 ## How to use
 *Clone the project using*
 ```
