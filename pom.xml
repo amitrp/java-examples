@@ -10,6 +10,7 @@
         <module>java-collections</module>
         <module>java-streams</module>
         <module>java-core</module>
+        <module>java-io</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
