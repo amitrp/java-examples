@@ -3,6 +3,7 @@ This project contains Java Streams API code samples that are used as examples on
 
 
 ## Top Java Streams Tutorials on amitph.com
+### [How to Add an Element to a Java Stream](https://www.amitph.com/java-stream-append-prepend-insert/)
 
 ### [Sorting Collections with Java Streams API](https://www.amitph.com/java-streams-sorted/)
 

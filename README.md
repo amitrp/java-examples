@@ -91,7 +91,7 @@ This project contains Core Java code samples that are used as examples on [amitp
 
 ### [Static Methods in Java Interfaces](https://www.amitph.com/java-interface-static-methods/)
 
-
+### [How to Add an Element to a Java Stream](https://www.amitph.com/java-stream-append-prepend-insert/)
 
 ## How to use
 *Clone the project using*
