@@ -1,4 +1,4 @@
-package com.amitph.java.map.model;
+package com.amitph.java.collections.map.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

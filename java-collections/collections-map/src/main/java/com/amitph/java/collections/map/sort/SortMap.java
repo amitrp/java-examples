@@ -1,6 +1,6 @@
-package com.amitph.java.map.sort;
+package com.amitph.java.collections.map.sort;
 
-import com.amitph.java.map.model.Product;
+import com.amitph.java.collections.map.model.Product;
 
 import java.util.ArrayList;
 import java.util.Collections;
