@@ -95,6 +95,8 @@ This project contains Core Java code samples that are used as examples on [amitp
 
 ### [Getting the Last Element of a Java Stream](https://www.amitph.com/java-stream-last-element/)
 
+### [How to Remove Duplicate Elements from a Java List](https://www.amitph.com/java-list-remove-duplicates/)
+
 ## How to use
 *Clone the project using*
 ```
