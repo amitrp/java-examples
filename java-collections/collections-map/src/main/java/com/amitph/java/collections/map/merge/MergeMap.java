@@ -1,4 +1,4 @@
-package com.amitph.java.map.merge;
+package com.amitph.java.collections.map.merge;
 
 import java.util.HashMap;
 import java.util.Map;
