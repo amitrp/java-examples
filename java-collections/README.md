@@ -68,6 +68,8 @@ This project contains Java Collections code samples that are used as examples on
 
 ### [Sort HashMap by Value or Key in Java](https://www.amitph.com/java-hashmap-sort/)
 
+### [How to Remove Duplicate Elements from a Java List](https://www.amitph.com/java-list-remove-duplicates/)
+
 ## How to use
 *Clone the project using*
 ```
