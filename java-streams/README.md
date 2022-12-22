@@ -3,6 +3,8 @@ This project contains Java Streams API code samples that are used as examples on
 
 
 ## Top Java Streams Tutorials on amitph.com
+### [Count and Remove Duplicates from a Java Stream](https://www.amitph.com/java-stream-remove-count-duplicates/)
+
 ### [Getting the Last Element of a Java Stream](https://www.amitph.com/java-stream-last-element/)
 
 ### [How to Add an Element to a Java Stream](https://www.amitph.com/java-stream-append-prepend-insert/)
