@@ -97,6 +97,8 @@ This project contains Core Java code samples that are used as examples on [amitp
 
 ### [How to Remove Duplicate Elements from a Java List](https://www.amitph.com/java-list-remove-duplicates/)
 
+### [Count and Remove Duplicates from a Java Stream](https://www.amitph.com/java-stream-remove-count-duplicates/)
+
 ## How to use
 *Clone the project using*
 ```
