@@ -3,6 +3,8 @@ This project contains Java Streams API code samples that are used as examples on
 
 
 ## Top Java Streams Tutorials on amitph.com
+### [Negate a Java Predicate and Method Reference](https://www.amitph.com/java-negate-predicate-method-reference/)
+
 ### [Count and Remove Duplicates from a Java Stream](https://www.amitph.com/java-stream-remove-count-duplicates/)
 
 ### [Getting the Last Element of a Java Stream](https://www.amitph.com/java-stream-last-element/)
