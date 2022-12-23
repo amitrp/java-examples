@@ -99,6 +99,8 @@ This project contains Core Java code samples that are used as examples on [amitp
 
 ### [Count and Remove Duplicates from a Java Stream](https://www.amitph.com/java-stream-remove-count-duplicates/)
 
+### [Negate a Java Predicate and Method Reference](https://www.amitph.com/java-negate-predicate-method-reference/)
+
 ## How to use
 *Clone the project using*
 ```
