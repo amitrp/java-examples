@@ -103,6 +103,8 @@ This project contains Core Java code samples that are used as examples on [amitp
 
 ### [Java Streams filter() with Lambda Expressions](https://www.amitph.com/java-streams-filter-lambda-expressions/)
 
+### [Create a Java Stream of Random Numbers](https://www.amitph.com/java-stream-random-numbers/)
+
 ## How to use
 *Clone the project using*
 ```
