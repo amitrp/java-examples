@@ -101,6 +101,8 @@ This project contains Core Java code samples that are used as examples on [amitp
 
 ### [Negate a Java Predicate and Method Reference](https://www.amitph.com/java-negate-predicate-method-reference/)
 
+### [Java Streams filter() with Lambda Expressions](https://www.amitph.com/java-streams-filter-lambda-expressions/)
+
 ## How to use
 *Clone the project using*
 ```
