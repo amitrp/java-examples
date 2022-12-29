@@ -3,6 +3,8 @@ This project contains Java Streams API code samples that are used as examples on
 
 
 ## Top Java Streams Tutorials on amitph.com
+### [Create a Java Stream of Random Numbers](https://www.amitph.com/java-stream-random-numbers/)
+
 ### [Java Streams filter() with Lambda Expressions](https://www.amitph.com/java-streams-filter-lambda-expressions/)
 
 ### [Negate a Java Predicate and Method Reference](https://www.amitph.com/java-negate-predicate-method-reference/)
