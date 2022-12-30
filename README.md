@@ -105,6 +105,8 @@ This project contains Core Java code samples that are used as examples on [amitp
 
 ### [Create a Java Stream of Random Numbers](https://www.amitph.com/java-stream-random-numbers/)
 
+### [Merging Multiple Java Streams](https://www.amitph.com/java-streams-merge/)
+
 ## How to use
 *Clone the project using*
 ```
