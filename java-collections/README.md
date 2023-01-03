@@ -30,7 +30,7 @@ This project contains Java Collections code samples that are used as examples on
 
 ### [How to Merge Multiple Collections in Java](https://www.amitph.com/java-collections-merge/ )
 
-### [How to Initialise a List Inline in Java](https://www.amitph.com/create-list-in-java/)
+### [How to Initialize a List Inline in Java](https://www.amitph.com/create-list-in-java/)
 
 ### [How to Partition List in Multiple Sublists in Java](https://www.amitph.com/java-partition-list/)
 
@@ -56,13 +56,13 @@ This project contains Java Collections code samples that are used as examples on
 
 ### [Introduction to Java TreeSets With Examples](https://www.amitph.com/introduction-java-treesets/)
 
-### [How to Initialise a HashMap Inline in Java](https://www.amitph.com/create-hashmap-in-java/)
+### [How to Initialize a HashMap Inline in Java](https://www.amitph.com/create-hashmap-in-java/)
 
 ### [Introduction to Java HashSets With Examples](https://www.amitph.com/introduction-java-hashsets/)
 
 ### [Introduction to Java Collections Set Interface](https://www.amitph.com/introduction-java-set/)
 
-### [How to Initialise a HashSet Inline in Java](https://www.amitph.com/create-hashset-in-java/)
+### [How to Initialize a HashSet Inline in Java](https://www.amitph.com/create-hashset-in-java/)
 
 ### [Examples of Converting List to Map using Streams](https://www.amitph.com/convert-list-to-map-using-streams/)
 

@@ -53,11 +53,11 @@ This project contains Core Java code samples that are used as examples on [amitp
 
 ### [How to Merge Multiple Collections in Java](https://www.amitph.com/java-collections-merge/ )
 
-### [How to Initialise a List Inline in Java](https://www.amitph.com/create-list-in-java/)
+### [How to Initialize a List Inline in Java](https://www.amitph.com/create-list-in-java/)
 
-### [How to Initialise a HashSet Inline in Java](https://www.amitph.com/create-hashset-in-java/)
+### [How to Initialize a HashSet Inline in Java](https://www.amitph.com/create-hashset-in-java/)
 
-### [How to Initialise a HashMap Inline in Java](https://www.amitph.com/create-hashmap-in-java/)
+### [How to Initialize a HashMap Inline in Java](https://www.amitph.com/create-hashmap-in-java/)
 
 ### [Filtering a Map in Java](https://www.amitph.com/java-filter-map-examples/)
 
