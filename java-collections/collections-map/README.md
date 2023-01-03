@@ -19,6 +19,8 @@ This project contains Java Collections Map code samples that are used as example
 
 ### [Sort HashMap by Value or Key in Java](https://www.amitph.com/java-hashmap-sort/)
 
+### [How to Initialize a HashMap Inline in Java](https://www.amitph.com/create-hashmap-in-java/)
+
 
 ## How to Use
 *Clone the project using*

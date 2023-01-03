@@ -92,7 +92,6 @@ public class ListInitializer {
         System.out.println("Initialize ArrayList manually");
         initializer.initializeJavaArrayList();
 
-
         System.out.println("Initialize ArrayList using Collection");
         initializer.initializeJavaArrayListFromCollection();
 
