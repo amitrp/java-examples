@@ -107,6 +107,8 @@ This project contains Core Java code samples that are used as examples on [amitp
 
 ### [Merging Multiple Java Streams](https://www.amitph.com/java-streams-merge/)
 
+### [Chaining Multiple Java Predicates Together](https://www.amitph.com/java-multiple-predicates-chain/)
+
 ## How to use
 *Clone the project using*
 ```
