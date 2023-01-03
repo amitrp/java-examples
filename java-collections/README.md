@@ -64,6 +64,8 @@ This project contains Java Collections code samples that are used as examples on
 
 ### [How to Initialize a HashSet Inline in Java](https://www.amitph.com/create-hashset-in-java/)
 
+### [How to Initialize a HashMap Inline in Java](https://www.amitph.com/create-hashmap-in-java/)
+
 ### [Examples of Converting List to Map using Streams](https://www.amitph.com/convert-list-to-map-using-streams/)
 
 ### [Sort HashMap by Value or Key in Java](https://www.amitph.com/java-hashmap-sort/)
