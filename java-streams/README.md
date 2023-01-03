@@ -3,6 +3,8 @@ This project contains Java Streams API code samples that are used as examples on
 
 
 ## Top Java Streams Tutorials on amitph.com
+### [Chaining Multiple Java Predicates Together](https://www.amitph.com/java-multiple-predicates-chain/)
+
 ### [Merging Multiple Java Streams](https://www.amitph.com/java-streams-merge/)
 
 ### [Create a Java Stream of Random Numbers](https://www.amitph.com/java-stream-random-numbers/)
