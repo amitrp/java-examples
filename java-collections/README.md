@@ -72,6 +72,8 @@ This project contains Java Collections code samples that are used as examples on
 
 ### [How to Remove Duplicate Elements from a Java List](https://www.amitph.com/java-list-remove-duplicates/)
 
+### [Java HashSet Sorting Examples](https://www.amitph.com/java-sort-hashset/)
+
 ## How to use
 *Clone the project using*
 ```

@@ -109,6 +109,8 @@ This project contains Core Java code samples that are used as examples on [amitp
 
 ### [Chaining Multiple Java Predicates Together](https://www.amitph.com/java-multiple-predicates-chain/)
 
+### [Java HashSet Sorting Examples](https://www.amitph.com/java-sort-hashset/)
+
 ## How to use
 *Clone the project using*
 ```
