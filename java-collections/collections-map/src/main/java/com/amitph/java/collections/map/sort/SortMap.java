@@ -43,8 +43,7 @@ public class SortMap {
     private void usingJavaStreams() {
         System.out.println("Using JavaStreams: sort by key...");
 
-        map.entrySet()
-                .stream()
+        map.entrySet().stream()
                 .sorted(Map.Entry.comparingByKey())
                 .forEach(System.out::println);
 

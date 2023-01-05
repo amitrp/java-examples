@@ -8,7 +8,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 public class SortCollections {
     Collection<Student> students;
@@ -35,7 +34,7 @@ public class SortCollections {
         List<String> firstNames = students.stream()
                 .map(Student::getFirstName)
                 .sorted()
-                .collect(Collectors.toList());
+                .toList();
 
         System.out.println(firstNames);
     }
@@ -44,11 +43,11 @@ public class SortCollections {
         System.out.println();
         System.out.println("Sorting -> steamOfCustomObjects");
 
-        List<Student> firstNames = students.stream()
+        List<Student> sorted = students.stream()
                 .sorted(Comparator.comparing(Student::getFirstName))
-                .collect(Collectors.toList());
+                .toList();
 
-        firstNames.forEach(System.out::println);
+        sorted.forEach(System.out::println);
     }
 
     private void streamOfElements_Reversed() {
@@ -58,7 +57,7 @@ public class SortCollections {
         List<String> firstNames = students.stream()
                 .map(Student::getFirstName)
                 .sorted(Comparator.reverseOrder())
-                .collect(Collectors.toList());
+                .toList();
 
         System.out.println(firstNames);
     }
@@ -67,11 +66,11 @@ public class SortCollections {
         System.out.println();
         System.out.println("Sorting -> steamOfCustomObjects_Reversed");
 
-        List<Student> firstNames = students.stream()
+        List<Student> sorted = students.stream()
                 .sorted(Comparator.comparing(Student::getFirstName).reversed())
-                .collect(Collectors.toList());
+                .toList();
 
-        firstNames.forEach(System.out::println);
+        sorted.forEach(System.out::println);
     }
 
     private void streamOfMapKeys() {
@@ -80,7 +79,7 @@ public class SortCollections {
 
         List<Long> studentIds = studentMap.keySet().stream()
                 .sorted()
-                .collect(Collectors.toList());
+                .toList();
 
         System.out.println(studentIds);
     }
@@ -91,7 +90,7 @@ public class SortCollections {
 
         List<Student> students = studentMap.values().stream()
                 .sorted(Comparator.comparing(Student::getFirstName))
-                .collect(Collectors.toList());
+                .toList();
 
         students.forEach(System.out::println);
     }
