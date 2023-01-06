@@ -111,6 +111,8 @@ This project contains Core Java code samples that are used as examples on [amitp
 
 ### [Java HashSet Sorting Examples](https://www.amitph.com/java-sort-hashset/)
 
+### [Check if Two Java Lists are Equal](https://www.amitph.com/java-test-list-ordinality-equality/)
+
 ## How to use
 *Clone the project using*
 ```
