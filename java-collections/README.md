@@ -74,6 +74,8 @@ This project contains Java Collections code samples that are used as examples on
 
 ### [Java HashSet Sorting Examples](https://www.amitph.com/java-sort-hashset/)
 
+### [Check if Two Java Lists are Equal](https://www.amitph.com/java-test-list-ordinality-equality/)
+
 ## How to use
 *Clone the project using*
 ```
