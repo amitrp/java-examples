@@ -113,6 +113,9 @@ This project contains Core Java code samples that are used as examples on [amitp
 
 ### [Check if Two Java Lists are Equal](https://www.amitph.com/java-test-list-ordinality-equality/)
 
+### [Asserting Java Lists for Equality Ignoring the Order](https://www.amitph.com/java-assert-lists-equals-ignore-order/)
+
+
 ## How to use
 *Clone the project using*
 ```
