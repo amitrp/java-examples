@@ -76,6 +76,8 @@ This project contains Java Collections code samples that are used as examples on
 
 ### [Check if Two Java Lists are Equal](https://www.amitph.com/java-test-list-ordinality-equality/)
 
+### [Asserting Java Lists for Equality Ignoring the Order](https://www.amitph.com/java-assert-lists-equals-ignore-order/)
+
 ## How to use
 *Clone the project using*
 ```
