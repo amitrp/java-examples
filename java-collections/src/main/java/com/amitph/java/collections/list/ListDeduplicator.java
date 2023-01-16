@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.List;
 
-public class Deduplicator {
+public class ListDeduplicator {
     public <T> List<T> usingStreamDistinct(List<T> list) {
         return list.stream()
                 .distinct()
@@ -16,7 +16,7 @@ public class Deduplicator {
     }
 
     public static void main(String[] ar) {
-        Deduplicator deduplicator = new Deduplicator();
+        ListDeduplicator deduplicator = new ListDeduplicator();
 
         System.out.println("Remove duplicates from list: using Streams distinct()");
         deduplicator.usingStreamDistinct(List.of(1, 2, 4, 2, 1, 4, 2, 5, 6, 4))
