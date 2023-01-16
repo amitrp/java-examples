@@ -9,7 +9,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.stream.IntStream;
 
-public class Partitioner {
+public class ListPartitioner {
     public <T> List<List<T>> partitionListUsingGuava(List<T> list, int size) {
         return Lists.partition(list, size);
     }
@@ -45,7 +45,7 @@ public class Partitioner {
     }
 
     public static void main(String[] a) {
-        Partitioner partitioner = new Partitioner();
+        ListPartitioner partitioner = new ListPartitioner();
 
         System.out.println("Partition a Java List: Using Guava");
         List<Integer> list = IntStream.rangeClosed(1, 21).boxed().toList();

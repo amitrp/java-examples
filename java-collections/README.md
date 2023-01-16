@@ -78,6 +78,8 @@ This project contains Java Collections code samples that are used as examples on
 
 ### [Asserting Java Lists for Equality Ignoring the Order](https://www.amitph.com/java-assert-lists-equals-ignore-order/)
 
+### [Finding the Differences Between Two Java Lists](https://www.amitph.com/java-find-lists-difference/)
+
 ## How to use
 *Clone the project using*
 ```
@@ -87,6 +89,3 @@ This project contains Java Collections code samples that are used as examples on
 ```
 ~ cd java-collections/
 ```
-
-
-
