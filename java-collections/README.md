@@ -80,6 +80,8 @@ This project contains Java Collections code samples that are used as examples on
 
 ### [Finding the Differences Between Two Java Lists](https://www.amitph.com/java-find-lists-difference/)
 
+### [Comparing Two Lists In Java](https://www.amitph.com/java-compare-lists/)
+
 ## How to use
 *Clone the project using*
 ```
