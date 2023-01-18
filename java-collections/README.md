@@ -84,6 +84,8 @@ This project contains Java Collections code samples that are used as examples on
 
 ### [Finding the Difference Between Two Java Sets](https://www.amitph.com/java-find-sets-difference/)
 
+### [Flattening Nested Lists in Java](https://www.amitph.com/java-flatten-nested-lists/)
+
 
 ## How to use
 *Clone the project using*
