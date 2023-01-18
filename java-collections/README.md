@@ -82,6 +82,9 @@ This project contains Java Collections code samples that are used as examples on
 
 ### [Comparing Two Lists In Java](https://www.amitph.com/java-compare-lists/)
 
+###[Finding the Difference Between Two Java Sets](https://www.amitph.com/java-find-sets-difference/)
+
+
 ## How to use
 *Clone the project using*
 ```
