@@ -86,6 +86,8 @@ This project contains Java Collections code samples that are used as examples on
 
 ### [Flattening Nested Lists in Java](https://www.amitph.com/java-flatten-nested-lists/)
 
+### [Case-Insensitive Search in Java ArrayLists](https://www.amitph.com/java-arraylists-case-insensitive-search/)
+
 
 ## How to use
 *Clone the project using*
