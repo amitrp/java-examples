@@ -88,6 +88,7 @@ This project contains Java Collections code samples that are used as examples on
 
 ### [Case-Insensitive Search in Java ArrayLists](https://www.amitph.com/java-arraylists-case-insensitive-search/)
 
+### [Sorting Collection of Objects by Multiple Fields in Java](https://www.amitph.com/java-collection-sort-multiple-fields/)
 
 ## How to use
 *Clone the project using*
