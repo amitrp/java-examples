@@ -4,7 +4,6 @@ public interface FlyingToyWithDefault {
     void fly();
 
     default void rest() {
-        System.out.println("If not told explicitly, " +
-                "I rest like this");
+        System.out.println("If not told explicitly, " + "I rest like this");
     }
 }

@@ -12,6 +12,6 @@ public interface Calculator {
     }
 
     private void logMessage(String msg) {
-        //Log it
+        // Log it
     }
 }

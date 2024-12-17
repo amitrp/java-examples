@@ -1,27 +1,20 @@
 package com.amitph.java.streams;
 
 import com.google.common.collect.Streams;
-
 import java.util.stream.Stream;
 
 public class AccessStreamsLastElement {
     public <T> T usingReduction(Stream<T> stream) {
-        return stream
-                .reduce((t, t2) -> t2)
-                .orElse(null);
+        return stream.reduce((t, t2) -> t2).orElse(null);
     }
 
     public <T> T usingGuava(Stream<T> stream) {
-        return Streams.findLast(stream)
-                .orElse(null);
+        return Streams.findLast(stream).orElse(null);
     }
 
     public <T> T usingSkip(Stream<T> stream) {
         long count = stream.count();
-        return stream
-                .skip(count)
-                .findFirst()
-                .orElse(null);
+        return stream.skip(count).findFirst().orElse(null);
     }
 
     public static void main(String[] args) {

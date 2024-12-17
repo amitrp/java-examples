@@ -1,14 +1,13 @@
 package com.amitph.java.io;
 
-import com.google.common.io.ByteStreams;
-import org.apache.commons.io.IOUtils;
+import static java.nio.charset.StandardCharsets.UTF_8;
 
+import com.google.common.io.ByteStreams;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-
-import static java.nio.charset.StandardCharsets.UTF_8;
+import org.apache.commons.io.IOUtils;
 
 public class InputStreamToByteArray {
     public InputStream toInputStream(byte[] bytes) {
@@ -27,8 +26,7 @@ public class InputStreamToByteArray {
 
         byte[] bucket = new byte[1024];
         int nReadBytes;
-        while ((nReadBytes = inputStream
-                .read(bucket, 0, bucket.length)) != -1) {
+        while ((nReadBytes = inputStream.read(bucket, 0, bucket.length)) != -1) {
             byteArrayOutputStream.write(bucket, 0, nReadBytes);
         }
 
@@ -43,13 +41,14 @@ public class InputStreamToByteArray {
         return ByteStreams.toByteArray(inputStream);
     }
 
-
     public static void main(String[] a) throws IOException {
         InputStreamToByteArray converter = new InputStreamToByteArray();
-        byte[] input = """
+        byte[] input =
+                """
                 "this sample text that we will convert
                 to a byte[] then to InputStream"
-                """.getBytes(UTF_8);
+                """
+                        .getBytes(UTF_8);
 
         InputStream inputStream1 = converter.toInputStream(input);
         System.out.println("InputStream to byte[] using plain Java");

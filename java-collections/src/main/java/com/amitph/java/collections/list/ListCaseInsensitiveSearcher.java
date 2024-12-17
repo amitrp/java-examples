@@ -8,8 +8,7 @@ public class ListCaseInsensitiveSearcher {
     private final List<String> list = List.of("Ray", "Leo", "Bee", "Tim");
 
     public void usingStreams() {
-        boolean contains = list.stream()
-                .anyMatch(x -> x.equalsIgnoreCase("raY"));
+        boolean contains = list.stream().anyMatch(x -> x.equalsIgnoreCase("raY"));
         System.out.println(contains);
     }
 
@@ -23,8 +22,7 @@ public class ListCaseInsensitiveSearcher {
 
         System.out.println(customList.contains("raY"));
 
-        System.out.println(
-                customList.containsAll(List.of("ray", "bEE", "tIm")));
+        System.out.println(customList.containsAll(List.of("ray", "bEE", "tIm")));
     }
 
     public static boolean searchIgnoringCase(List<String> list, String text) {
@@ -58,7 +56,6 @@ class CaseInsensitiveArrayList extends ArrayList<String> {
     @Override
     public boolean contains(Object o) {
         String text = (String) o;
-        return this.stream()
-                .anyMatch(x -> x.equalsIgnoreCase(text));
+        return this.stream().anyMatch(x -> x.equalsIgnoreCase(text));
     }
 }

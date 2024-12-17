@@ -1,11 +1,10 @@
 package com.amitph.java.collections.set;
 
 import com.google.common.collect.Sets;
-import org.apache.commons.collections4.CollectionUtils;
-
 import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
+import org.apache.commons.collections4.CollectionUtils;
 
 public class SetsDifferenceFinder {
     private final Set<String> one = Set.of("Ray", "Tim", "Leo", "Bee");
@@ -19,9 +18,8 @@ public class SetsDifferenceFinder {
     }
 
     public void usingStreams() {
-        Set<String> difference = one.stream()
-                .filter(e -> !two.contains(e))
-                .collect(Collectors.toSet());
+        Set<String> difference =
+                one.stream().filter(e -> !two.contains(e)).collect(Collectors.toSet());
         System.out.println(difference);
     }
 
@@ -35,7 +33,7 @@ public class SetsDifferenceFinder {
         System.out.println(differences);
     }
 
-    public void symmetricDifferenceUsingApacheCommons(){
+    public void symmetricDifferenceUsingApacheCommons() {
         Set<String> differences = new HashSet<>(CollectionUtils.disjunction(one, two));
         System.out.println(differences);
     }

@@ -2,12 +2,11 @@ package com.amitph.java.collections.list;
 
 import com.google.common.collect.Iterables;
 import com.google.common.collect.Lists;
-import org.apache.commons.collections4.ListUtils;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.IntStream;
+import org.apache.commons.collections4.ListUtils;
 
 public class ListPartitioner {
     public <T> List<List<T>> partitionListUsingGuava(List<T> list, int size) {
@@ -49,25 +48,19 @@ public class ListPartitioner {
 
         System.out.println("Partition a Java List: Using Guava");
         List<Integer> list = IntStream.rangeClosed(1, 21).boxed().toList();
-        partitioner.partitionListUsingGuava(list, 5)
-                .forEach(System.out::println);
-
+        partitioner.partitionListUsingGuava(list, 5).forEach(System.out::println);
 
         System.out.println("Partition a Java Collection: Using Guava");
         Collection<Integer> collection = IntStream.rangeClosed(1, 21).boxed().toList();
-        partitioner.partitionCollectionUsingGuava(collection, 5)
-                .forEach(System.out::println);
+        partitioner.partitionCollectionUsingGuava(collection, 5).forEach(System.out::println);
 
         System.out.println("Partition a Java Collection: Using Guava");
-        partitioner.paddedPartitionCollectionUsingGuava(collection, 5)
-                .forEach(System.out::println);
+        partitioner.paddedPartitionCollectionUsingGuava(collection, 5).forEach(System.out::println);
 
         System.out.println("Partition a Java List: Using Apache Commons Collections");
-        partitioner.partitionListUsingApacheCommons(list, 5)
-                .forEach(System.out::println);
+        partitioner.partitionListUsingApacheCommons(list, 5).forEach(System.out::println);
 
         System.out.println("Partition a Java List: Using Plain Java");
-        partitioner.partitionListUsingPlainJava(list, 5)
-                .forEach(System.out::println);
+        partitioner.partitionListUsingPlainJava(list, 5).forEach(System.out::println);
     }
 }

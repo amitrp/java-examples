@@ -1,7 +1,6 @@
 package com.amitph.java.collections.map.sort;
 
 import com.amitph.java.collections.map.model.Product;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -43,15 +42,11 @@ public class SortMap {
     private void usingJavaStreams() {
         System.out.println("Using JavaStreams: sort by key...");
 
-        map.entrySet().stream()
-                .sorted(Map.Entry.comparingByKey())
-                .forEach(System.out::println);
+        map.entrySet().stream().sorted(Map.Entry.comparingByKey()).forEach(System.out::println);
 
         System.out.println("Using JavaStreams: sort by value...");
 
-        map.entrySet().stream()
-                .sorted(Map.Entry.comparingByValue())
-                .forEach(System.out::println);
+        map.entrySet().stream().sorted(Map.Entry.comparingByValue()).forEach(System.out::println);
     }
 
     private void usingTreeSet() {

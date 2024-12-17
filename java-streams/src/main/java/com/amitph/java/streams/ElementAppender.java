@@ -1,13 +1,13 @@
 package com.amitph.java.streams;
 
+import static java.util.stream.Collectors.toList;
+
 import java.util.Iterator;
 import java.util.List;
 import java.util.Spliterator;
 import java.util.Spliterators;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
-
-import static java.util.stream.Collectors.toList;
 
 public class ElementAppender {
     public <T> Stream<T> appendElement(Stream<T> stream, T newElement) {
@@ -29,9 +29,8 @@ public class ElementAppender {
 
         Iterator<T> iterator = Spliterators.iterator(spliterator);
 
-        Stream<T> stream1 = Stream.concat(
-                Stream.generate(iterator::next).limit(index),
-                Stream.of(newElement));
+        Stream<T> stream1 =
+                Stream.concat(Stream.generate(iterator::next).limit(index), Stream.of(newElement));
         Stream<T> stream2 = StreamSupport.stream(spliterator, false);
 
         return Stream.concat(stream1, stream2);
@@ -47,11 +46,13 @@ public class ElementAppender {
         elementAppender.prependElement(Stream.of(1, 2, 6, 7), 0).forEach(System.out::println);
 
         System.out.println("Insert an element in a Stream using List");
-        elementAppender.insertElement_usingList(Stream.of(1, 2, 6, 7), 3, 2)
+        elementAppender
+                .insertElement_usingList(Stream.of(1, 2, 6, 7), 3, 2)
                 .forEach(System.out::println);
 
         System.out.println("Insert an element in a Stream using Spliterator");
-        elementAppender.insertElement_usingSpliterator(Stream.of(1, 2, 6, 7), 3, 2)
+        elementAppender
+                .insertElement_usingSpliterator(Stream.of(1, 2, 6, 7), 3, 2)
                 .forEach(System.out::println);
     }
 }

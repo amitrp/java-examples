@@ -1,7 +1,6 @@
 package com.amitph.java.streams.comparator;
 
 import com.amitph.java.streams.model.Student;
-
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -27,12 +26,13 @@ public class ComparatorExamples {
     public void usingAnonymousComparator() {
         System.out.println("Soring by usingAnonymousComparator ");
 
-        students.sort(new Comparator<Student>() {
-            @Override
-            public int compare(Student o1, Student o2) {
-                return o1.getFirstName().compareTo(o2.getFirstName());
-            }
-        });
+        students.sort(
+                new Comparator<Student>() {
+                    @Override
+                    public int compare(Student o1, Student o2) {
+                        return o1.getFirstName().compareTo(o2.getFirstName());
+                    }
+                });
 
         students.forEach(System.out::println);
     }
@@ -40,8 +40,7 @@ public class ComparatorExamples {
     public void usingLambdaExpression() {
         System.out.println("Sorting by usingAnonymousComparator");
 
-        students.sort(
-                (o1, o2) -> o1.getFirstName().compareTo(o2.getFirstName()));
+        students.sort((o1, o2) -> o1.getFirstName().compareTo(o2.getFirstName()));
 
         students.forEach(System.out::println);
     }
@@ -68,9 +67,7 @@ public class ComparatorExamples {
         System.out.println("Sorting by usingComparatorCompositions");
 
         students.sort(
-                Comparator.comparing(Student::getLastName)
-                        .thenComparing(Student::getFirstName)
-        );
+                Comparator.comparing(Student::getLastName).thenComparing(Student::getFirstName));
 
         students.forEach(System.out::println);
     }
@@ -78,8 +75,7 @@ public class ComparatorExamples {
     public void usingLambdaExpression_Reversed() {
         System.out.println("Sorting by usingLambdaExpression_Reversed");
 
-        students.sort(
-                (o1, o2) -> o2.getFirstName().compareTo(o1.getFirstName()));
+        students.sort((o1, o2) -> o2.getFirstName().compareTo(o1.getFirstName()));
 
         students.forEach(System.out::println);
     }
@@ -87,9 +83,7 @@ public class ComparatorExamples {
     public void usingComparatorComparing_Reversed() {
         System.out.println("Sorting by usingComparatorComparing_Reversed");
 
-        students.sort(Comparator.comparing(
-                Student::getAge,
-                Comparator.reverseOrder()));
+        students.sort(Comparator.comparing(Student::getAge, Comparator.reverseOrder()));
 
         students.forEach(System.out::println);
     }
@@ -97,10 +91,9 @@ public class ComparatorExamples {
     public void usingComparatorCompositions_MixedSortOrder() {
         System.out.println("Sorting by usingComparatorCompositions_MixedSortOrder");
 
-        students.sort(Comparator.comparing(
-                Student::getLastName)
-                .thenComparing(Student::getAge, Comparator.reverseOrder())
-        );
+        students.sort(
+                Comparator.comparing(Student::getLastName)
+                        .thenComparing(Student::getAge, Comparator.reverseOrder()));
 
         students.forEach(System.out::println);
     }

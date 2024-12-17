@@ -1,9 +1,8 @@
 package com.amitph.java.streams;
 
+import java.util.stream.Stream;
 import one.util.streamex.StreamEx;
 import org.jooq.lambda.Seq;
-
-import java.util.stream.Stream;
 
 public class MergeStreams {
     public void mergeTwoStreamsWithJavaConcat() {
@@ -21,8 +20,8 @@ public class MergeStreams {
         Stream<Integer> stream3 = Stream.of(5, 6);
         Stream<Integer> stream4 = Stream.of(7, 8);
 
-        Stream<Integer> merged = Stream.concat(stream1, Stream.concat(stream2,
-                Stream.concat(stream3, stream4)));
+        Stream<Integer> merged =
+                Stream.concat(stream1, Stream.concat(stream2, Stream.concat(stream3, stream4)));
 
         merged.forEach(System.out::println);
     }
@@ -33,9 +32,7 @@ public class MergeStreams {
         Stream<Integer> stream3 = Stream.of(5, 6);
         Stream<Integer> stream4 = Stream.of(7, 8);
 
-        Stream<Integer> merged =
-                Stream.of(stream1, stream2, stream3, stream4)
-                        .flatMap(x -> x);
+        Stream<Integer> merged = Stream.of(stream1, stream2, stream3, stream4).flatMap(x -> x);
 
         merged.forEach(System.out::println);
     }
@@ -45,9 +42,7 @@ public class MergeStreams {
         Stream<Integer> stream2 = Stream.of(4, 5);
         Stream<Integer> stream3 = Stream.of(7, 8);
 
-        Stream<Integer> merged = StreamEx.of(stream1)
-                .append(stream2)
-                .append(stream3);
+        Stream<Integer> merged = StreamEx.of(stream1).append(stream2).append(stream3);
 
         merged.forEach(System.out::println);
     }
@@ -57,9 +52,7 @@ public class MergeStreams {
         Stream<Integer> stream2 = Stream.of(1, 2);
         Stream<Integer> stream3 = Stream.of(6, 7);
 
-        Stream<Integer> merged = StreamEx.of(stream1)
-                .append(stream3)
-                .prepend(stream2);
+        Stream<Integer> merged = StreamEx.of(stream1).append(stream3).prepend(stream2);
 
         merged.forEach(System.out::println);
     }
@@ -69,9 +62,7 @@ public class MergeStreams {
         Stream<Integer> stream2 = Stream.of(4, 5);
         Stream<Integer> stream3 = Stream.of(7, 8);
 
-        Stream<Integer> merged = Seq.ofType(stream1, Integer.class)
-                .append(stream2)
-                .append(stream3);
+        Stream<Integer> merged = Seq.ofType(stream1, Integer.class).append(stream2).append(stream3);
 
         merged.forEach(System.out::println);
     }
@@ -81,9 +72,8 @@ public class MergeStreams {
         Stream<Integer> stream2 = Stream.of(1, 2);
         Stream<Integer> stream3 = Stream.of(6, 7);
 
-        Stream<Integer> merged = Seq.ofType(stream1, Integer.class)
-                .append(stream3)
-                .prepend(stream2);
+        Stream<Integer> merged =
+                Seq.ofType(stream1, Integer.class).append(stream3).prepend(stream2);
 
         merged.forEach(System.out::println);
     }

@@ -6,26 +6,21 @@ import java.util.function.Predicate;
 public class PredicateChain {
     public void filterWithSinglePredicate() {
         List<String> names = List.of("Maria", "Sandra", "Rachel", "Mary", "Michael");
-        List<String> output = names.stream()
-                .filter(n -> n.startsWith("M"))
-                .toList();
+        List<String> output = names.stream().filter(n -> n.startsWith("M")).toList();
         output.forEach(System.out::println);
     }
 
     public void multipleFiltersWithPredicates() {
         List<String> names = List.of("Maria", "Sandra", "Rachel", "Mary", "Michael");
-        List<String> output = names.stream()
-                .filter(n -> n.startsWith("M"))
-                .filter(n -> n.length() > 4)
-                .toList();
+        List<String> output =
+                names.stream().filter(n -> n.startsWith("M")).filter(n -> n.length() > 4).toList();
         output.forEach(System.out::println);
     }
 
     public void filterWithTwoConditions() {
         List<String> names = List.of("Maria", "Sandra", "Rachel", "Mary", "Michael");
-        List<String> output = names.stream()
-                .filter(n -> n.startsWith("M") && n.length() > 4)
-                .toList();
+        List<String> output =
+                names.stream().filter(n -> n.startsWith("M") && n.length() > 4).toList();
         output.forEach(System.out::println);
     }
 
@@ -34,9 +29,7 @@ public class PredicateChain {
         Predicate<String> predicate2 = n -> n.length() > 4;
 
         List<String> names = List.of("Maria", "Sandra", "Rachel", "Mary", "Michael");
-        List<String> output = names.stream()
-                .filter(predicate1.and(predicate2))
-                .toList();
+        List<String> output = names.stream().filter(predicate1.and(predicate2)).toList();
         output.forEach(System.out::println);
     }
 
@@ -45,9 +38,7 @@ public class PredicateChain {
         Predicate<String> predicate2 = n -> n.length() > 4;
 
         List<String> names = List.of("Maria", "Sandra", "Rachel", "Mary", "Michael");
-        List<String> output = names.stream()
-                .filter(predicate1.or(predicate2))
-                .toList();
+        List<String> output = names.stream().filter(predicate1.or(predicate2)).toList();
         output.forEach(System.out::println);
     }
 
@@ -56,35 +47,30 @@ public class PredicateChain {
         Predicate<String> predicate2 = n -> n.length() > 4;
 
         List<String> names = List.of("Maria", "Sandra", "Rachel", "Mary", "Michael");
-        List<String> output = names.stream()
-                .filter(predicate1.negate().or(predicate2.negate()))
-                .toList();
+        List<String> output =
+                names.stream().filter(predicate1.negate().or(predicate2.negate())).toList();
         output.forEach(System.out::println);
     }
 
     public void filterWithPredicateCollectionAnd() {
-        List<Predicate<String>> predicates = List.of(
-                n -> n.startsWith("M"),
-                n -> n.length() > 4
-        );
+        List<Predicate<String>> predicates = List.of(n -> n.startsWith("M"), n -> n.length() > 4);
 
         List<String> names = List.of("Maria", "Sandra", "Rachel", "Mary", "Michael");
-        List<String> output = names.stream()
-                .filter(predicates.stream().reduce(p -> true, Predicate::and))
-                .toList();
+        List<String> output =
+                names.stream()
+                        .filter(predicates.stream().reduce(p -> true, Predicate::and))
+                        .toList();
         output.forEach(System.out::println);
     }
 
     public void filterWithPredicateCollectionOr() {
-        List<Predicate<String>> predicates = List.of(
-                n -> n.startsWith("M"),
-                n -> n.length() > 4
-        );
+        List<Predicate<String>> predicates = List.of(n -> n.startsWith("M"), n -> n.length() > 4);
 
         List<String> names = List.of("Maria", "Sandra", "Rachel", "Mary", "Michael");
-        List<String> output = names.stream()
-                .filter(predicates.stream().reduce(p -> false, Predicate::or))
-                .toList();
+        List<String> output =
+                names.stream()
+                        .filter(predicates.stream().reduce(p -> false, Predicate::or))
+                        .toList();
         output.forEach(System.out::println);
     }
 

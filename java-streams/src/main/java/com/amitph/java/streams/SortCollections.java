@@ -1,7 +1,6 @@
 package com.amitph.java.streams;
 
 import com.amitph.java.streams.model.Student;
-
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -31,10 +30,7 @@ public class SortCollections {
         System.out.println();
         System.out.println("Sorting -> steamOfElements");
 
-        List<String> firstNames = students.stream()
-                .map(Student::getFirstName)
-                .sorted()
-                .toList();
+        List<String> firstNames = students.stream().map(Student::getFirstName).sorted().toList();
 
         System.out.println(firstNames);
     }
@@ -43,9 +39,8 @@ public class SortCollections {
         System.out.println();
         System.out.println("Sorting -> steamOfCustomObjects");
 
-        List<Student> sorted = students.stream()
-                .sorted(Comparator.comparing(Student::getFirstName))
-                .toList();
+        List<Student> sorted =
+                students.stream().sorted(Comparator.comparing(Student::getFirstName)).toList();
 
         sorted.forEach(System.out::println);
     }
@@ -54,10 +49,11 @@ public class SortCollections {
         System.out.println();
         System.out.println("Sorting -> steamOfElements_Reversed");
 
-        List<String> firstNames = students.stream()
-                .map(Student::getFirstName)
-                .sorted(Comparator.reverseOrder())
-                .toList();
+        List<String> firstNames =
+                students.stream()
+                        .map(Student::getFirstName)
+                        .sorted(Comparator.reverseOrder())
+                        .toList();
 
         System.out.println(firstNames);
     }
@@ -66,9 +62,10 @@ public class SortCollections {
         System.out.println();
         System.out.println("Sorting -> steamOfCustomObjects_Reversed");
 
-        List<Student> sorted = students.stream()
-                .sorted(Comparator.comparing(Student::getFirstName).reversed())
-                .toList();
+        List<Student> sorted =
+                students.stream()
+                        .sorted(Comparator.comparing(Student::getFirstName).reversed())
+                        .toList();
 
         sorted.forEach(System.out::println);
     }
@@ -77,9 +74,7 @@ public class SortCollections {
         System.out.println();
         System.out.println("Sorting -> steamOfMapKeys");
 
-        List<Long> studentIds = studentMap.keySet().stream()
-                .sorted()
-                .toList();
+        List<Long> studentIds = studentMap.keySet().stream().sorted().toList();
 
         System.out.println(studentIds);
     }
@@ -88,9 +83,10 @@ public class SortCollections {
         System.out.println();
         System.out.println("Sorting -> streamOfMapValues");
 
-        List<Student> students = studentMap.values().stream()
-                .sorted(Comparator.comparing(Student::getFirstName))
-                .toList();
+        List<Student> students =
+                studentMap.values().stream()
+                        .sorted(Comparator.comparing(Student::getFirstName))
+                        .toList();
 
         students.forEach(System.out::println);
     }

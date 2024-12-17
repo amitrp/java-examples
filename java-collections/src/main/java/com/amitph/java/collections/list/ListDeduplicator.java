@@ -6,9 +6,7 @@ import java.util.List;
 
 public class ListDeduplicator {
     public <T> List<T> usingStreamDistinct(List<T> list) {
-        return list.stream()
-                .distinct()
-                .toList();
+        return list.stream().distinct().toList();
     }
 
     public <T> List<T> usingJavaSet(List<T> list) {
@@ -19,12 +17,12 @@ public class ListDeduplicator {
         ListDeduplicator deduplicator = new ListDeduplicator();
 
         System.out.println("Remove duplicates from list: using Streams distinct()");
-        deduplicator.usingStreamDistinct(List.of(1, 2, 4, 2, 1, 4, 2, 5, 6, 4))
+        deduplicator
+                .usingStreamDistinct(List.of(1, 2, 4, 2, 1, 4, 2, 5, 6, 4))
                 .forEach(System.out::print);
 
         System.out.println();
         System.out.println("Remove duplicates from list: using Java Set");
-        deduplicator.usingJavaSet(List.of(1, 2, 4, 2, 1, 4, 2, 5, 6, 4))
-                .forEach(System.out::print);
+        deduplicator.usingJavaSet(List.of(1, 2, 4, 2, 1, 4, 2, 5, 6, 4)).forEach(System.out::print);
     }
 }

@@ -1,8 +1,7 @@
 package com.amitph.java.collections.list;
 
-import org.junit.Assert;
-
 import java.util.List;
+import org.junit.Assert;
 
 public class ListEqualityAsserter {
     private final List<Integer> list1 = List.of(10, 11, 12, 14);
