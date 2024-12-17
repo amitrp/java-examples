@@ -1,7 +1,5 @@
 package com.amitph.java.io.download.file;
 
-import org.apache.commons.io.FileUtils;
-
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -21,10 +19,12 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
+import org.apache.commons.io.FileUtils;
 
 public class FileDownloader {
 
-    public static void main(String[] a) throws IOException, URISyntaxException, InterruptedException, ExecutionException {
+    public static void main(String[] a)
+            throws IOException, URISyntaxException, InterruptedException, ExecutionException {
         FileDownloader fileDownloader = new FileDownloader();
         String from = "https://www.google.com";
         String to = "/temp/file/path";
@@ -39,11 +39,9 @@ public class FileDownloader {
 
     public void usingPlainJava(String from, String to) throws IOException {
         URL url = new URL(from);
-        try (
-                InputStream inputStream = url.openStream();
+        try (InputStream inputStream = url.openStream();
                 BufferedInputStream bufferedInputStream = new BufferedInputStream(inputStream);
-                FileOutputStream fileOutputStream = new FileOutputStream(to)
-        ) {
+                FileOutputStream fileOutputStream = new FileOutputStream(to)) {
             byte[] bucket = new byte[2048];
             int numBytesRead;
 
@@ -62,45 +60,38 @@ public class FileDownloader {
 
     public void usingNio(String from, String to) throws IOException {
         URL url = new URL(from);
-        try (
-                ReadableByteChannel inputChannel = Channels.newChannel(url.openStream());
-
+        try (ReadableByteChannel inputChannel = Channels.newChannel(url.openStream());
                 FileOutputStream fileOutputStream = new FileOutputStream(to);
-                FileChannel outputChannel = fileOutputStream.getChannel()
-        ) {
+                FileChannel outputChannel = fileOutputStream.getChannel()) {
             outputChannel.transferFrom(inputChannel, 0, Long.MAX_VALUE);
         }
     }
 
-    public void usingHttpClient(String from, String to) throws IOException, URISyntaxException, InterruptedException {
+    public void usingHttpClient(String from, String to)
+            throws IOException, URISyntaxException, InterruptedException {
         HttpClient httpClient = HttpClient.newBuilder().build();
 
-        HttpRequest httpRequest = HttpRequest
-                .newBuilder()
-                .uri(new URI(from))
-                .GET()
-                .build();
+        HttpRequest httpRequest = HttpRequest.newBuilder().uri(new URI(from)).GET().build();
 
-        HttpResponse<InputStream> response = httpClient.send(httpRequest, responseInfo -> HttpResponse.BodySubscribers.ofInputStream());
+        HttpResponse<InputStream> response =
+                httpClient.send(
+                        httpRequest, responseInfo -> HttpResponse.BodySubscribers.ofInputStream());
         Files.copy(response.body(), Paths.get(to));
     }
 
-    public void usingHttpClientAsync(String from, String to) throws IOException, URISyntaxException, InterruptedException, ExecutionException {
+    public void usingHttpClientAsync(String from, String to)
+            throws IOException, URISyntaxException, InterruptedException, ExecutionException {
         HttpClient httpClient = HttpClient.newBuilder().build();
-        HttpRequest httpRequest = HttpRequest
-                .newBuilder()
-                .uri(new URI(from))
-                .GET()
-                .build();
+        HttpRequest httpRequest = HttpRequest.newBuilder().uri(new URI(from)).GET().build();
 
-        Future<InputStream> futureInputStream = httpClient
-                .sendAsync(httpRequest, HttpResponse.BodyHandlers.ofInputStream())
-                .thenApply(HttpResponse::body);
+        Future<InputStream> futureInputStream =
+                httpClient
+                        .sendAsync(httpRequest, HttpResponse.BodyHandlers.ofInputStream())
+                        .thenApply(HttpResponse::body);
 
         InputStream inputStream = futureInputStream.get();
         Files.copy(inputStream, Path.of(to));
     }
-
 
     public void usingCommonsIo(String from, String to) throws IOException {
         URL url = new URL(from);

@@ -26,9 +26,8 @@ public class HashSetSorter {
 
     public void usingStreamSorted() {
         Set<Integer> hashSet = Set.of(3, 2, 5, 4, 1, 6, 8, 7);
-        Set<Integer> linkedHashSet = hashSet.stream()
-                .sorted()
-                .collect(Collectors.toCollection(LinkedHashSet::new));
+        Set<Integer> linkedHashSet =
+                hashSet.stream().sorted().collect(Collectors.toCollection(LinkedHashSet::new));
         System.out.println(linkedHashSet);
     }
 

@@ -12,7 +12,7 @@ public interface Calculator {
     }
 
     private static void logMessage(String msg) {
-        //Log it
+        // Log it
     }
 
     static void main(String[] a) {

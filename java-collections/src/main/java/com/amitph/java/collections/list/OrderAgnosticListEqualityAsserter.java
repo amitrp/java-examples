@@ -1,12 +1,11 @@
 package com.amitph.java.collections.list;
 
+import java.util.List;
 import org.apache.commons.collections4.CollectionUtils;
 import org.assertj.core.api.Assertions;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.testng.Assert;
-
-import java.util.List;
 
 public class OrderAgnosticListEqualityAsserter {
     private final List<Integer> list1 = List.of(11, 12, 13, 14, 16);
@@ -15,30 +14,26 @@ public class OrderAgnosticListEqualityAsserter {
 
     public void usingTestNG() {
         Assert.assertTrue(
-                list1.size() == list2.size() &&
-                        list1.containsAll(list2) &&
-                        list2.containsAll(list1)
-        );
+                list1.size() == list2.size()
+                        && list1.containsAll(list2)
+                        && list2.containsAll(list1));
 
         Assert.assertFalse(
-                list1.size() == list3.size() &&
-                        list1.containsAll(list3) &&
-                        list3.containsAll(list1)
-        );
+                list1.size() == list3.size()
+                        && list1.containsAll(list3)
+                        && list3.containsAll(list1));
     }
 
     public void usingJUnit() {
         org.junit.Assert.assertTrue(
-                list1.size() == list2.size() &&
-                        list1.containsAll(list2) &&
-                        list2.containsAll(list1)
-        );
+                list1.size() == list2.size()
+                        && list1.containsAll(list2)
+                        && list2.containsAll(list1));
 
         org.junit.Assert.assertFalse(
-                list1.size() == list3.size() &&
-                        list1.containsAll(list3) &&
-                        list3.containsAll(list1)
-        );
+                list1.size() == list3.size()
+                        && list1.containsAll(list3)
+                        && list3.containsAll(list1));
     }
 
     public void usingAssertJ() {

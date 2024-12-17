@@ -1,37 +1,30 @@
 package com.amitph.java.streams;
 
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.ToString;
-
 import java.util.function.Predicate;
 import java.util.stream.Stream;
+import lombok.RequiredArgsConstructor;
+import lombok.ToString;
 
 public class PrediateNegater {
     public void negatePredicateWithNegate() {
         Predicate<Integer> evenNumber = i -> i % 2 == 0;
-        Stream.of(1, 2, 3, 4, 5, 6)
-                .filter(evenNumber.negate())
-                .forEach(System.out::println);
+        Stream.of(1, 2, 3, 4, 5, 6).filter(evenNumber.negate()).forEach(System.out::println);
     }
 
     public void negatePredicateWithNot() {
         Predicate<Integer> evenNumber = i -> i % 2 == 0;
-        Stream.of(1, 2, 3, 4, 5, 6)
-                .filter(Predicate.not(evenNumber))
-                .forEach(System.out::println);
+        Stream.of(1, 2, 3, 4, 5, 6).filter(Predicate.not(evenNumber)).forEach(System.out::println);
     }
 
     public void negateMethodReferenceWithNot() {
-        Stream<Person> stream = Stream.of(
-                new Person("Bob", true),
-                new Person("Tom", false),
-                new Person("Cob", false),
-                new Person("Rick", true)
-        );
+        Stream<Person> stream =
+                Stream.of(
+                        new Person("Bob", true),
+                        new Person("Tom", false),
+                        new Person("Cob", false),
+                        new Person("Rick", true));
 
-        stream.filter(Predicate.not(Person::getAdult))
-                .forEach(System.out::println);
+        stream.filter(Predicate.not(Person::getAdult)).forEach(System.out::println);
     }
 
     public static void main(String[] a) {

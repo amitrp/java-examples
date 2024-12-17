@@ -1,10 +1,9 @@
 package com.amitph.java.collections.list;
 
-import org.apache.commons.collections4.CollectionUtils;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
+import org.apache.commons.collections4.CollectionUtils;
 
 public class ListsComparer {
     public void checkEquality() {
@@ -20,18 +19,16 @@ public class ListsComparer {
         List<Integer> one = List.of(1, 2, 4, 6, 8);
         List<Integer> two = List.of(3, 4, 5, 6, 7);
 
-        //Plain Java
+        // Plain Java
         List<Integer> commons = new ArrayList<>(one);
         commons.retainAll(two);
         System.out.println(commons);
 
-        //Java Streams
-        commons = one.stream()
-                .filter(two::contains)
-                .toList();
+        // Java Streams
+        commons = one.stream().filter(two::contains).toList();
         System.out.println(commons);
 
-        //Apache Commons Collections
+        // Apache Commons Collections
         commons = new ArrayList<>(CollectionUtils.intersection(one, two));
         System.out.println(commons);
     }
@@ -40,18 +37,16 @@ public class ListsComparer {
         List<Integer> one = List.of(1, 2, 4, 6, 8);
         List<Integer> two = List.of(3, 4, 5, 6, 7);
 
-        //Plain Java
+        // Plain Java
         List<Integer> difference = new ArrayList<>(one);
         difference.removeAll(two);
         System.out.println(difference);
 
-        //Java Streams
-        difference = one.stream()
-                .filter(Predicate.not(two::contains))
-                .toList();
+        // Java Streams
+        difference = one.stream().filter(Predicate.not(two::contains)).toList();
         System.out.println(difference);
 
-        //Apache Commons Collections
+        // Apache Commons Collections
         difference = new ArrayList<>(CollectionUtils.removeAll(one, two));
         System.out.println(difference);
     }

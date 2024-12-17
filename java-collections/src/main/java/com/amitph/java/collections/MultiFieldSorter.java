@@ -1,24 +1,24 @@
 package com.amitph.java.collections;
 
 import com.google.common.collect.ComparisonChain;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
 import org.apache.commons.lang3.builder.CompareToBuilder;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-
 @RequiredArgsConstructor
 public class MultiFieldSorter {
-    private final List<Student> collection = new ArrayList<>(List.of(
-            new Student(1L, "Ray", 18),
-            new Student(2L, "Bee", 18),
-            new Student(3L, "Ray", 17),
-            new Student(4L, "Bia", 15),
-            new Student(5L, "Ria", 15)
-    ));
+    private final List<Student> collection =
+            new ArrayList<>(
+                    List.of(
+                            new Student(1L, "Ray", 18),
+                            new Student(2L, "Bee", 18),
+                            new Student(3L, "Ray", 17),
+                            new Student(4L, "Bia", 15),
+                            new Student(5L, "Ria", 15)));
 
     public void sortUsingComparator_Field_by_Field() {
         collection.sort(new SimpleComparator());
@@ -36,9 +36,7 @@ public class MultiFieldSorter {
     }
 
     public void sortUsingComparator_Comparing() {
-        collection.sort(Comparator
-                .comparing(Student::getName)
-                .thenComparing(Student::getAge));
+        collection.sort(Comparator.comparing(Student::getName).thenComparing(Student::getAge));
         collection.forEach(System.out::println);
     }
 
@@ -76,8 +74,7 @@ class SimpleComparator implements Comparator<Student> {
     public int compare(Student o1, Student o2) {
         int difference = o1.getName().compareTo(o2.getName());
 
-        return (difference != 0) ? difference
-                : Integer.compare(o1.getAge(), o2.getAge());
+        return (difference != 0) ? difference : Integer.compare(o1.getAge(), o2.getAge());
     }
 }
 

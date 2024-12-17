@@ -2,15 +2,14 @@ package com.amitph.java.collections.list;
 
 import com.google.common.collect.Lists;
 import com.google.common.primitives.Ints;
-import org.apache.commons.collections4.CollectionUtils;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import org.apache.commons.collections4.CollectionUtils;
 
 public class ListAndArrayConverter {
     public void arrayToListUsingJava_createImmutableList() {
-        Integer[] array = new Integer[]{98, 99, 100};
+        Integer[] array = new Integer[] {98, 99, 100};
         List<Integer> list = Arrays.asList(array);
 
         System.out.println(list);
@@ -24,15 +23,14 @@ public class ListAndArrayConverter {
     }
 
     public void arrayToListUsingJava_createMutableList() {
-        Integer[] array = new Integer[]{98, 99, 100};
-        List<Integer> list =
-                new ArrayList<>(Arrays.asList(array));
+        Integer[] array = new Integer[] {98, 99, 100};
+        List<Integer> list = new ArrayList<>(Arrays.asList(array));
 
         System.out.println(list);
     }
 
     public void arrayToListUsingApacheCommons() {
-        Integer[] array = new Integer[]{98, 99, 100};
+        Integer[] array = new Integer[] {98, 99, 100};
         List<Integer> list = new ArrayList<>();
         CollectionUtils.addAll(list, array);
 
@@ -40,7 +38,7 @@ public class ListAndArrayConverter {
     }
 
     public void arrayToListUsingGuava() {
-        Integer[] array = new Integer[]{98, 99, 100};
+        Integer[] array = new Integer[] {98, 99, 100};
         List<Integer> list = Lists.newArrayList(array);
 
         System.out.println(list);

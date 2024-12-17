@@ -1,15 +1,14 @@
 package com.amitph.java.streams;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import static java.util.stream.Collectors.toMap;
 
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-
-import static java.util.stream.Collectors.toMap;
+import lombok.Data;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 
 public class Deduplicator {
     public static void main(String[] ar) {
@@ -20,23 +19,19 @@ public class Deduplicator {
                 .deduplicateUsingDistinct(Stream.of("a", "b", "c", "b", "d", "a", "d"))
                 .forEach(System.out::println);
 
-
         System.out.println();
         System.out.println("Remove duplicate elements of a Stream - using Set");
         deduplicator
                 .deduplicateUsingSet(Stream.of("a", "b", "c", "b", "d", "a", "d"))
                 .forEach(System.out::println);
 
-
         System.out.println();
         System.out.println("Remove duplicate elements of a Stream of custom objects");
-        deduplicator
-                .deduplicateUsingDistinct(getStudentStream())
-                .forEach(System.out::println);
-
+        deduplicator.deduplicateUsingDistinct(getStudentStream()).forEach(System.out::println);
 
         System.out.println();
-        System.out.println("Remove duplicate elements of a Stream of custom objects by specific fields");
+        System.out.println(
+                "Remove duplicate elements of a Stream of custom objects by specific fields");
         Stream<StudentWrapper> wrapperStream = getStudentStream().map(StudentWrapper::new);
 
         deduplicator
@@ -46,7 +41,8 @@ public class Deduplicator {
 
         System.out.println();
         System.out.println("Counting the duplicates in a Stream");
-        deduplicator.groupByCount(Stream.of(22, 31, 22, 34, 25, 31, 34))
+        deduplicator
+                .groupByCount(Stream.of(22, 31, 22, 34, 25, 31, 34))
                 .entrySet()
                 .forEach(System.out::println);
     }
@@ -56,14 +52,11 @@ public class Deduplicator {
     }
 
     public <T> Stream<T> deduplicateUsingSet(Stream<T> stream) {
-        return stream
-                .collect(Collectors.toSet())
-                .stream();
+        return stream.collect(Collectors.toSet()).stream();
     }
 
     public <T> Map<T, Long> groupByCount(Stream<T> stream) {
-        return stream
-                .collect(toMap(Function.identity(), x -> 1L, Long::sum));
+        return stream.collect(toMap(Function.identity(), x -> 1L, Long::sum));
     }
 
     private static Stream<Student> getStudentStream() {
@@ -71,8 +64,7 @@ public class Deduplicator {
                 new Student(1L, "Bob", "Jack", 12),
                 new Student(2L, "Nick", "Stephen", 14),
                 new Student(3L, "Bob", "Holden", 14),
-                new Student(2L, "Nick", "Stephen", 14)
-        );
+                new Student(2L, "Nick", "Stephen", 14));
     }
 }
 
@@ -108,8 +100,7 @@ class StudentWrapper {
         if (!(other instanceof StudentWrapper wrapper2)) {
             return false;
         }
-        return wrapper2.student.getFirstName()
-                .equals(this.student.getFirstName());
+        return wrapper2.student.getFirstName().equals(this.student.getFirstName());
     }
 
     @Override

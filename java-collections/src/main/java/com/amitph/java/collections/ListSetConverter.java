@@ -2,12 +2,11 @@ package com.amitph.java.collections;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
-import org.apache.commons.collections4.CollectionUtils;
-
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import org.apache.commons.collections4.CollectionUtils;
 
 public class ListSetConverter {
 
@@ -68,7 +67,6 @@ public class ListSetConverter {
 
         System.out.println(set);
     }
-
 
     public static void main(String[] a) {
         ListSetConverter converter = new ListSetConverter();

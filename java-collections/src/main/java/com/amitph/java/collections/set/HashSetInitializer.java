@@ -2,7 +2,6 @@ package com.amitph.java.collections.set;
 
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
-
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
@@ -25,11 +24,11 @@ public class HashSetInitializer {
     }
 
     public void initializeJavaHashSetFromList() {
-        Map<String, String> map = Map.of(
-                "color", "black",
-                "drink", "coffee",
-                "shape", "slim"
-        );
+        Map<String, String> map =
+                Map.of(
+                        "color", "black",
+                        "drink", "coffee",
+                        "shape", "slim");
         Set<String> set = new HashSet<>(map.keySet());
 
         set.forEach(System.out::println);
@@ -43,29 +42,31 @@ public class HashSetInitializer {
     }
 
     public void initializeJavaHashSetFromCollectorsToSet() {
-        Set<String> shoppingSet = Stream.of("Bread", "Milk", "Eggs", "Cheese", "Butter")
-                .collect(Collectors.toSet());
+        Set<String> shoppingSet =
+                Stream.of("Bread", "Milk", "Eggs", "Cheese", "Butter").collect(Collectors.toSet());
 
         shoppingSet.forEach(System.out::println);
     }
 
     public void initializeJavaHashSetFromCollectorsToCollection() {
-        Set<String> shoppingSet = Stream.of("Bread", "Milk", "Eggs", "Cheese", "Butter")
-                .collect(Collectors.toCollection(HashSet::new));
+        Set<String> shoppingSet =
+                Stream.of("Bread", "Milk", "Eggs", "Cheese", "Butter")
+                        .collect(Collectors.toCollection(HashSet::new));
 
         shoppingSet.forEach(System.out::println);
     }
 
     public void initializeJavaHashSetUsingAnonymousSubClass() {
-        Set<String> shoppingSet = new HashSet<>() {
-            {
-                add("Bread");
-                add("Milk");
-                add("Eggs");
-                add("Cheese");
-                add("Butter");
-            }
-        };
+        Set<String> shoppingSet =
+                new HashSet<>() {
+                    {
+                        add("Bread");
+                        add("Milk");
+                        add("Eggs");
+                        add("Cheese");
+                        add("Butter");
+                    }
+                };
 
         shoppingSet.forEach(System.out::println);
     }

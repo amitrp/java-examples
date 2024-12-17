@@ -19,7 +19,6 @@ public class ListInitializer {
         list.forEach(System.out::println);
     }
 
-
     public void initializeJavaArrayListFromCollection() {
         Collection<Integer> hashSet = Set.of(1, 2, 3);
         List<Integer> list = new ArrayList<>(hashSet);
@@ -34,20 +33,20 @@ public class ListInitializer {
     }
 
     public void initializeJavaArrayListFromCollectorsToCollection() {
-        List<Integer> list = Stream.of(1, 2, 3)
-                .collect(Collectors.toCollection(ArrayList::new));
+        List<Integer> list = Stream.of(1, 2, 3).collect(Collectors.toCollection(ArrayList::new));
 
         list.forEach(System.out::println);
     }
 
     public void initializeJavaArrayListUsingAnonymousSubClass() {
-        List<Integer> list = new ArrayList<>() {
-            {
-                add(1);
-                add(2);
-                add(3);
-            }
-        };
+        List<Integer> list =
+                new ArrayList<>() {
+                    {
+                        add(1);
+                        add(2);
+                        add(3);
+                    }
+                };
 
         list.forEach(System.out::println);
     }
@@ -71,11 +70,11 @@ public class ListInitializer {
     }
 
     public void initializeImmutableArrayListUsingAnotherArray() {
-        Integer[] array = new Integer[]{1, 2, 3};
+        Integer[] array = new Integer[] {1, 2, 3};
         List<Integer> list = Arrays.asList(array);
         System.out.println(list);
 
-        //modify the array
+        // modify the array
         array[0] = 100;
         System.out.println(Arrays.toString(array));
         System.out.println(list);
